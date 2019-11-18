@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!--Disponer dos párrafos,Capturar el evento click solo del primero utilizando la librería jQuery-->
+<html lang="en">
+
+<head>
+    <script src="jquery.js"></script>
+    <script>
+        //iniciando las funciones
+        $(document).ready(inicio);
+        //configurando la funcion inicio, y haciendo el evento clic
+        function inicio() {
+            $('#hola').click(clickHecho);
+        }
+        //configurando la funcion clickHecho
+        function clickHecho() {
+            $('#hola').css('color', 'white');
+            $('#hola').css('font-size', '30px');
+            $('#hola').css('background-color', '#00C5FF');
+        }
+    </script>
+</head>
+
+<body>
+    <!--//parte donde se ejecutaran las funciones antes hechas-->
+    <p id="hola">Este es el primer texto</p>
+    <p>Este es el segundo texto</p>
+</body>
+
+</html>

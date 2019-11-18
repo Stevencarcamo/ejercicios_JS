@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--Confeccionar una página que contenga un div con un conjunto 
+        de párrafos. Cuando se presione con el mouse dentro del div 
+        ocultarlo lentamente y cuando esté completamente oculto hacer 
+        que aparezca lentamente otro bloque de texto.-->
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#texto1").click(function () {
+                $(this).hide(4000);
+                $("#texto2").show(4000);
+            });
+            $("#texto2").click(function () {
+                $(this).hide(4000);
+                $("#texto3").show(4000);
+            });
+            $("#texto3").click(function () {
+                $(this).hide(4000);
+                $("#texto1").show(4000);
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container" id="contenedor2">
+        <h5 id="texto1">Bootstrap es una biblioteca multiplataforma o conjunto de herramientas de código abierto para
+            diseño de sitios y aplicaciones web. Contiene plantillas de diseño con tipografía, formularios, botones,
+            cuadros, menús de navegación y otros elementos de diseño basado en HTML y CSS,</h5>
+
+        <h5 id="texto2" style="display: none;">Jquery es una biblioteca multiplataforma de JavaScript, creada
+            inicialmente
+            por John Resig, que permite simplificar la manera de interactuar con los documentos HTML, manipular el
+            árbol DOM, manejar eventos, desarrollar animaciones y agregar interacción con la técnica AJAX a páginas
+            web.</h5>
+
+
+    </div>
+</body>
+
+</html>

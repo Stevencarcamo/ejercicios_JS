@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--Crear una tabla con dos filas y dos columnas, 
+        cambiar el color del interior de la casilla cuando 
+        ingresamos con el mouse y regresarla al original 
+        cuando salimos.-->
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".color").mouseenter(function () {
+                $(this).css("background-color", "#007CFF");
+            });
+            $(".color").mouseleave(function () {
+                $(this).css("background-color", "");
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+    <div style="text-align: center" class="container">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Color 1</th>
+                    <th>Color 2</th>
+                </tr>
+            </thead>
+            <tr>
+                <td class="color">Color azul</td>
+                <td class="color">Color azul</td>
+            </tr>
+            <tr>
+                <td class="color">Color verde</td>
+                <td class="color">Color verde</td>
+            </tr>
+
+        </table>
+    </div>
+</body>
+
+</html>

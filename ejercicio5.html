@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--Crear una página que contenga dos tablas de 3 filas y 
+        3 columnas cada una con un texto en cada casillero. 
+        Luego al presionar un botón cambiar por la cadena "-" 
+        solo el contenido de la primer tabla, dejando intacto el 
+        de la segunda.-->
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#boton").click(function () {
+                $(".texto").text("-----");
+            });
+        });
+    </script>
+</head>
+
+<body>
+      <!--//parte donde se ejecutaran las funciones antes hechas-->
+    <div style="text-align: center" class="container">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Titulo 1</th>
+                    <th>Titulo 2</th>
+                    <th>Titulo 3</th>
+                </tr>
+            </thead>
+            <tr>
+                <td class="texto">Color azul</td>
+                <td class="texto">Color azul</td>
+                <td class="texto">Color azul</td>
+            </tr>
+            <tr>
+                <td class="texto">Color verde</td>
+                <td class="texto">Color verde</td>
+                <td class="texto">Color verde</td>
+            </tr>
+            <tr>
+                <td class="texto">Color amarillo</td>
+                <td class="texto">Color amarillo</td>
+                <td class="texto">Color amarillo</td>
+            </tr>
+        </table>
+
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Titulo 1</th>
+                    <th>Titulo 2</th>
+                    <th>Titulo 3</th>
+                </tr>
+            </thead>
+            <tr>
+                <td>Color rojo</td>
+                <td>Color rojo</td>
+                <td>Color rojo</td>
+            </tr>
+            <tr>
+                <td>Color rosado</td>
+                <td>Color rosado</td>
+                <td>Color rosado</td>
+            </tr>
+            <tr>
+                <td>Color morado</td>
+                <td>Color morado</td>
+                <td>Color morado</td>
+            </tr>
+        </table>
+        <button id="boton" type="button" class="btn btn-primary">Modificar texto</button>
+
+    </div>
+
+</body>
+
+</html>

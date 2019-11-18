@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--Disponer un título de noticia y seguidamente la descripción de la noticia (encerrarlo en un div con un nombre de clase),
+     repetir esto para tres noticias. Agregar tres botones que rescaten 
+    el nombre de la clase para la descripción de la noticia y cambien su tamaño de fuente.-->
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <script src="jquery.js"></script>
+    <script>
+        //inicio de las funciones a utilizar
+        $(document).ready(function () {
+            //accion del boton
+            $("#titulo").click(function () {
+                $(".p1").css("font-size", "24px");
+            });//cierre e la funcion de clic
+
+            $("#parrafo").click(function () {
+                $(".p2").css("font-size", "30px");
+            });//cierre e la funcion de clic
+
+            $("#color").click(function () {
+                $(".p3").css("font-size", "35px");
+            });//cierre e la funcion de clic
+        });//cierre de la funcion ready
+    </script>
+</head>
+
+<body>
+    <!--//parte donde se ejecutaran las funciones antes hechas-->
+    <div class="container">
+
+        <h1>Noticia 1</h1>
+        <p class="p1">Radisson Petra La Dehesa Santiago ofrece tarifas especiales para disfrutar un fin de semana en
+            Santiago de
+            Chile en agosto y septiembre (centraolreservas@radisson.cl).</p>
+        <button id="titulo" type="button" class="btn btn-primary">titulo</button>
+
+
+        <h1>Noticia 2</h1>
+        <p class="p2">La agencia de viajes Despegar.com lanzó una promoción especial para viajar durante septiembre a
+            Disney World
+            en Orlando, EE.UU. Incluye reserva de hotel, acceso a los parques y plan de comidas.</p>
+        <button id="parrafo" type="button" class="btn btn-primary">parrafo</button>
+
+
+        <h1>Noticia 3</h1>
+        <p class="p3">La Asociación de Hoteles, Restaurantes, Confiterías y Afines de Tandil y el Banco de Alimentos
+            Tandil,
+            realizaron la campaña Plato Solidario durante las vacaciones de invierno. Participaron 23 establecimientos
+            gastronómicos (www.bat.org.ar).</p>
+        <button id="color" type="button" class="btn btn-primary">color</button>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--Confeccionar una página que muestre dos tablas con tres filas cada una.
+ Cambiar el color de fondo de cada fila de la primer tabla cuando sea presionada con el mouse(evento click).-->
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <script src="jquery.js"></script>
+    <script>
+        //creando una variable e iniciando las funciones a utilizar
+        var x;
+        x = $(document);
+        x.ready(inicio);
+        //configurando la funcion inicio, creando dos variables y mencionar otras dos funciones
+        function inicio() {
+            var x = $(".uno");
+            var y = $(".dos")
+            y.click(verde)
+            x.click(mostrar);
+        }
+        //configurando la funcion mostrar
+        function mostrar() {
+            var x = $(".uno")
+            x.css("background-color", "#007CFF")
+        }
+        //configurando la funcion verde
+        function verde() {
+            var x = $(".dos")
+            x.css("background-color", "green")
+        }
+    </script>
+</head>
+
+<body>
+<!--parte donde se ejecutaran las funciones anteriores-->
+    <div class="container">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Titulo 1</th>
+                    <th>Titulo 2</th>
+                    <th>Titulo 3</th>
+                </tr>
+            </thead>
+            <tr class="uno">
+                <td>Color azul</td>
+                <td>Color azul</td>
+                <td>Color azul</td>
+            </tr>
+            <tr class="dos">
+                <td>Color verde</td>
+                <td>Color verde</td>
+                <td>Color verde</td>
+            </tr>
+            <tr class="uno">
+                <td>Color amarillo</td>
+                <td>Color amarillo</td>
+                <td>Color amarillo</td>
+            </tr>
+
+        </table>
+
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Titulo 1</th>
+                    <th>Titulo 2</th>
+                    <th>Titulo 3</th>
+                </tr>
+            </thead>
+            <tr>
+                <td>Color rojo</td>
+                <td>Color rojo</td>
+                <td>Color rojo</td>
+            </tr>
+            <tr>
+                <td>Color rosado</td>
+                <td>Color rosado</td>
+                <td>Color rosado</td>
+            </tr>
+            <tr>
+                <td>Color morado</td>
+                <td>Color morado</td>
+                <td>Color morado</td>
+            </tr>
+        </table>
+
+    </div>
+
+</body>
+
+</html>

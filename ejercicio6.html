@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--Confeccionar una página que tenga dos botones. 
+        El primero debe mostrar en un alert el contenido HTML 
+        de la cabecera de la página y el segundo el contenido HTML 
+        del cuerpo de la página.-->
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+    $("#head").click(function () {
+        alert($("head").html());
+    });
+
+    $("#body").click(function () {
+        alert($("body").html());
+    });
+});
+    </script>
+</head>
+
+<body>
+    <div class="container text-center">
+        <button id="head" class="btn btn-primary">Contenido Head</button>
+        <button id="body" class="btn btn-danger">Contenido Body</button>
+    </div>
+    <br>
+</body>
+
+</html>

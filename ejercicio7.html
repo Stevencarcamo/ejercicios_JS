@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--Definir una tabla con un conjunto de filas y columnas. 
+        Definir dos estilos, uno para la sección thead y otro para 
+        la sección tbody. Mediante dos botones permitir asociar y 
+        desasociar clases.-->
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#asociar1").click(function () {
+                $("#fila1").css("background-color", "#007CFF");
+            });
+
+            $("#asociar2").click(function () {
+                $("#fila2").css("background-color", "#179B2B");
+            });
+
+            $("#desasociar1").click(function () {
+                $("#fila1").css("background-color", "");
+            });
+
+            $("#desasociar2").click(function () {
+                $("#fila2").css("background-color", "");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div style="text-align: center" class="container">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Color 1</th>
+                    <th>Color 2</th>
+                    <th>Opciones</th>
+                </tr>
+            </thead>
+            <tr id="fila1">
+                <td class="texto">Color azul</td>
+                <td class="texto">Color azul</td>
+                <th><button id="asociar1" class="btn btn-success">Primera opcion</button>
+                    <button id="desasociar1" class="btn btn-primary">Segunda opcion</button>
+                </th>
+            </tr>
+            <tr id="fila2">
+                <td class="texto">Color verde</td>
+                <td class="texto">Color verde</td>
+                <td><button id="asociar2" class="btn btn-success">Primera opcion</button>
+                    <button id="desasociar2" class="btn btn-primary">Segunda opcion</button>
+                </td>
+            </tr>
+
+        </table>
+    </div>
+</body>
+
+</html>
